@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REBELS BAN & BOT MENU</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080808;
+ color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ background:#170000;
+ padding:22px;
+ text-align:center;
+ border-bottom:2px solid red;
+}
+header h2{color:red;margin:0}
+.container{padding:20px;max-width:650px;margin:auto}
+.card{
+ background:#151515;
+ border:1px solid #440000;
+ border-radius:12px;
+ padding:18px;
+ margin:16px 0;
+}
+h3{color:#ff2929}
+button{
+ width:100%;
+ padding:13px;
+ margin:7px 0;
+ background:#c40000;
+ color:white;
+ border:0;
+ border-radius:7px;
+ font-size:15px;
+ font-weight:bold;
+ cursor:pointer;
+}
+button:hover{background:red}
+input{
+ width:100%;
+ padding:13px;
+ background:#222;
+ border:1px solid #555;
+ color:white;
+ border-radius:7px;
+ margin:8px 0;
+}
+.hidden{display:none}
+.status{color:#00df76}
+footer{text-align:center;color:#777;padding:20px}
+</style>
+</head>
+<body>
+
+<header>
+<h2>🔥 REBELS CLAN 🔥</h2>
+<p>BAN & BOT CONTROL PANEL</p>
+</header>
+
+<div class="container">
+
+<div class="card" id="login">
+<h3>ADMIN LOGIN</h3>
+<input id="password" type="password"
+placeholder="Enter access code">
+<button onclick="login()">OPEN PANEL</button>
+<p id="error"></p>
+</div>
+
+<div id="dashboard" class="hidden">
+
+<div class="card">
+<h3>ADMIN DASHBOARD</h3>
+<p class="status">● Panel Online</p>
+<p>Welcome to REBELS Control Center</p>
+</div>
+
+<div class="card">
+<h3>🔴 BAN MENU</h3>
+<input id="number" placeholder="Enter WhatsApp number">
+<button onclick="simulate('Temporary ban request')">TEMPORARY BAN</button>
+<button onclick="simulate('Permanent ban request')">PERMANENT BAN</button>
+<button onclick="simulate('Unban request')">UNBAN NUMBER</button>
+</div>
+
+<div class="card">
+<h3>🤖 BOT MENU</h3>
+<button onclick="simulate('Bot connection checked')">BOT STATUS</button>
+<button onclick="simulate('Bot setup opened')">BOT SETUP</button>
+<button onclick="simulate('Bot configuration opened')">BOT SETTINGS</button>
+<button onclick="simulate('Bot disconnected')">DISCONNECT BOT</button>
+</div>
+
+<div class="card">
+<h3>📊 SYSTEM INFORMATION</h3>
+<p>Panel: <span class="status">ONLINE</span></p>
+<p>Ban tools: Interface only</p>
+<p>Bot tools: Interface only</p>
+<p id="result">System ready.</p>
+</div>
+
+<button onclick="logout()">LOG OUT</button>
+
+</div>
+</div>
+
+<footer>REBELS CLAN © 2026</footer>
+
+<script>
+function login(){
+ const pass=document.getElementById("password").value;
+ if(pass==="Kelvin2345"){
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+ }else{
+  document.getElementById("error").innerText="Wrong access code!";
+ }
+}
+function simulate(message){
+ document.getElementById("result").innerText=message+" — Demo only.";
+}
+function logout(){
+ document.getElementById(dashboard").classList.add("hidden");
+ document.getElementById("login").classList.remove("hidden");
+ document.getElementById("password").value="";
+}
+</script>
+</body>
+</html>
